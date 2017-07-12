@@ -1,12 +1,83 @@
+//Note: Header and main 'pre-flexed' at general.sass
 header
-    height: 180px
-    color: $color-back
-    background-color: $color-hover
-    text-align: center
+    height: 100%
+    float: left
+    color: $color4
 
-    h3
+    .page--title
+        font-size: 2em
+        font-weight: 400
+        margin: 30px 0 0 14%
+
+        span.pre
+            font-size: 12.6px
+            font-weight: 300
+            margin-right: 10px
+            color: $color3
+
+    .description
+        display: block
+        font-size: 13px
         font-weight: 300
+        margin: 10px 30px
+            left: 10ch
 
-    a
-        color: $color4
-        text-decoration: underline
+.navigation--main
+    height: 100%
+    min-width: 25%
+    position: fixed
+
+    ul
+        bottom: 0
+        margin:
+            top: 0
+            right: 0
+            bottom: 100px
+            left: 14%
+        position: absolute
+        transition: margin-bottom 0.4s
+
+        li
+            margin-top: 40px
+
+            span
+                color: $color4
+                font-weight: 300
+                margin-right: 10px
+                transition: color 0.8s
+
+            .count
+                color: $color3
+                font-size: 12px
+                transition: all .3s
+
+            .complete
+                display: block
+                font-size: 12px
+                margin-left: 8ch
+                transition: all .3s
+
+            .description
+                display: block
+                font-size: 10px
+                margin-left: 10ch
+                transition: all .3s
+
+            a
+                color: $color4
+                font-size: 1.4em
+                font-weight: 300
+                text-decoration: none
+                transition: font-size 0.4s, font-weight 0.4s
+
+            .selected
+                font-size: 3em
+                font-weight: 700
+
+                .description
+                    font-size: 16px
+                    margin-left: 8ch
+
+                .count
+                    color: $color3
+                    font-size: 18px

@@ -12,4 +12,8 @@
 @import "2-modules/footer.sass";
 
 //3-pages
-@import "3-pages/home.sass";
+  //Homepage
+  @import "3-pages/home/hero.sass";
+  @import "3-pages/home/two.sass";
+  @import "3-pages/home/three.sass";
+  @import "3-pages/home/four.sass";
