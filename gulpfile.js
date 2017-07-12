@@ -52,18 +52,24 @@ gulp.task('scripts', function (cb) {
 gulp.task('del', function(done) {
   var minifiedFolder = src + 'assets/min/';
   del(build, done);
-  del(minifiedFolder, done);
+  return del(minifiedFolder, done);
 });
 
 //Compress images with Tinypng
 gulp.task('tinypng', function () {
-	gulp.src(src + 'assets/img/**/*.{png,jpg,jpeg}')
+	gulp.src(src + 'assets/images/**/*.{png,jpg,jpeg}')
 		.pipe(tinypng({
 			sigFile: 'images/.tinypng-sigs',
-			log: true
-      key: //Your Tiny png account key
+			log: true,
+      key: 'NSGTHX_lcs3GgUdrWIE9Xf6HhIXyMAu1'
 		}))
 		.pipe(gulp.dest(src + 'assets/min/img/'));
+});
+
+//Copy SVG Images
+gulp.task('svg', function() {
+   gulp.src(src + 'assets/images/**/*.{svg}')
+   .pipe(gulp.dest(build + 'assets/images'));
 });
 
 //Copy Images [Dev -> Prod]
@@ -77,7 +83,6 @@ gulp.task('statics', function() {
    gulp.src(src + 'statics/**/*')
    .pipe(gulp.dest(build));
 });
-
 
 //Watch task
 gulp.task('watch', function() {
@@ -98,6 +103,7 @@ gulp.task('default', function() {
         'pages',
         'tinypng',
         'images',
+        'svg',
         'statics',
         'watch'
     ]);
