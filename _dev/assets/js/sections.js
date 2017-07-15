@@ -8,20 +8,21 @@ function main() {
       anchorItems[i].onclick = function() {
 
          for (var i = 0; i < anchorItems.length; i++) {
-            anchorItems[i].classList.remove('selected');
+            $(anchorItems[i]).removeClass('selected');
          }
 
          for (var i = 0; i < sections.length; i++) {
-            sections[i].style.opacity = '0';
-            sections[i].style.zIndex = '-1';
+            // sections[i].style.opacity = '0';
+            // sections[i].style.zIndex = '-1';
+            $(sections[i]).removeClass("is-selected");
          }
-
-         this.classList.add('selected');
 
          var href = this.getAttribute('href');
 
-         document.querySelector(href).style.opacity = '1';
-         document.querySelector(href).style.zIndex = '1';
+        //  document.querySelector(href).style.opacity = '1';
+        //  document.querySelector(href).style.zIndex = '1';
+        $(href).addClass("is-selected");
+        $(this).addClass('selected');
 
          if (href === '#hero') {
             list.style.marginBottom = '100px';
