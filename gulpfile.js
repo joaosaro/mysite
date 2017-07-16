@@ -67,8 +67,8 @@ gulp.task('tinypng', function () {
 });
 
 //Copy SVG Images
-gulp.task('svg', function() {
-   gulp.src(src + 'assets/images/**/*.{svg}')
+gulp.task('gifsvg', function() {
+   gulp.src(src + 'assets/images/**/*.{svg,gif}')
    .pipe(gulp.dest(build + 'assets/images'));
 });
 
@@ -90,7 +90,8 @@ gulp.task('watch', function() {
     gulp.watch(src + 'assets/min/**/*', ['pages']);
     gulp.watch(src + 'assets/sass/**/*', ['styles']);
     gulp.watch(src + 'assets/js/**/*', ['scripts']);
-    gulp.watch(src + 'assets/img/**/*', ['tinypng']);
+    gulp.watch(src + 'assets/img/**/*.{png,jpg,jpeg}', ['tinypng']);
+    gulp.watch(src + 'assets/img/**/*.{svg,gif}', ['gifsvg']);
     gulp.watch(src + 'assets/min/img/**/*', ['images']);
     gulp.watch(src + 'statics/**/*', ['statics']);
 })
@@ -103,7 +104,7 @@ gulp.task('default', function() {
         'pages',
         'tinypng',
         'images',
-        'svg',
+        'gifsvg',
         'statics',
         'watch'
     ]);

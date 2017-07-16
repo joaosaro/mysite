@@ -5,12 +5,12 @@ header
 
     nav.navigation--main
         ul
-            li: a.selected(href='#hero') 
+            li: a(href='#hero', class="trigger selected") 
                 | #[span.count 01] Who
                 span.description about me
-            li: a(href='#projects')
+            li: a(href='#projects', class="trigger")
                 | #[span.count 02] What
                 span.description my projects
-            li: a(href='#contacts') 
+            li: a(href='#contacts', class="trigger") 
                 | #[span.count 03] Where
                 span.description talk with me

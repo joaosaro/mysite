@@ -1,28 +1,75 @@
+mixin project(className, title, cat, task, date, link, site)
+    .project(class= className)
+        .project--title
+            h3.title= title
+            h4.details= cat + " / " + task + " / " + date
+        .project--site
+            a(href= link, target="_blank")= site
+
+
 section#projects
-    .box
-        article
-            img(src='http://imb.ulximg.com/image/src/artist/1381260982_7d1af5350d0c0d189771c2140409cddf.jpg/26f5f8b2db9331df21ba4303cde26ba9/1381260982_72e46264afba5f79518f039e4f9df0f7.jpg', alt='Action Bronson')
-            h2 Action Bronson Announces That He’ll Drop A New Project In Early 2016
-            p
-                | More than likely, Action Bronson will remember 2015 for being a year packed with an equal amount of highs and lows. The Queens rapper dropped his well-received debut album, Mr. Wonderful, in March, and got another season of his entertaining Munchies
-                | cooking show, “Fuck, That’s Delicious,” off the ground. However, he also took some nasty Ls, like getting ethered in a beef by Tony Starks himself, Ghostface Killah, and sued for his use of samples.
-            p
-                | In any case, Bronsolini’s on that new-year-new-you vibe: He posted on Twitter recently that fans can expect his latest project to drop at the top of the new year.
-            p
-                | Fans should temper their excitement, however, at least until the hirsute rapper shares a downloadable file. Bronson also announced last year that he’d drop the last installment of his and Party Supplies’ excellent Blue Chips series, but there’s since
-                | been no further information released on that project.
+    div.projects--header
+        h1 Projects
     
-    .box
-        article
-            img(src='https://images.rapgenius.com/e4e53b7f03232ca6164f65a599807578.1000x1000x1.jpg', alt='good kid, m.A.A.d city')
-            h2 Kendrick Lamar’s ‘good kid, m.A.A.d city’ Short Film Has Finally Surfaced
-            p
-                | Back in 2014, news broke that there was a short film circulating that was at least inspired by Kendrick Lamar’s classic good kid, m.A.A.d city, and may be an official, artistic piece of the entire presentation of the album. After a few local showings,
-                | buzz around the film mostly came and went. That was until it officially surfaced online Thursday morning.
-            p
-                | Directed by Kahlil Joseph, m.A.A.d is more of a collection of vibrant images set to Kendrick’s songs than an actual film, but it makes for interesting viewing nonetheless. K.Dot appears in the 15-minute film only via old home video from 1992, and
-                | briefly, so his connection to the short is almost entirely through his music.
-            p
-                | As of now the film has only been shown at a few film festivals and likely was never meant to be seen otherwise. While Kendrick initially toyed with the idea of an official GKMC short film, Joseph’s film never became that. Instead it was simply linked
-                | to Kendrick, and with the infusion of old home footage it obviously has the rapper’s blessing. In fact, according to DJ Booth, m.A.A.d was created after K. Dot and Joseph collaborated to create a video meant to be shown during Kendrick’s set
-                | on Kanye West’s Yeezus tour, and eventually some of that footage became Joseph’s film.
+    .projects-going
+        h2 On going...
+
+        +project(
+                "proverbios", 
+                "Provérbios Disléxicos", 
+                "Fun",
+                "Web Developer",
+                "2017",
+                "http://www.proverbiosdislexicos.com", "www.proverbiosdislexicos.com"
+        )
+
+        +project(
+                "jitt", 
+                "JiTT.travel", 
+                "Full-time Job",
+                "Front-end Developer & analytics",
+                "2015-2017",
+                "http://www.jitt.travel", "www.jitt.travel"
+        )
+
+        +project(
+                "crf", 
+                "Ceira Rock Fest", 
+                "Music Festival", 
+                "Team Member",
+                "since 2009", 
+                "http://www.ceirarockfest.com", 
+                "www.ceirarockfest.com"
+        )
+
+        +project(
+                "ceiramove", 
+                "Ceira Move", 
+                "Local Web Magazine", 
+                "Co-creator and editor",
+                "since 2009", 
+                "http://www.ceiramove.com", 
+                "www.ceiramove.com"
+        )
+
+    .projects-done
+        h2 Done!
+        
+        +project(
+                "lusotenis", 
+                "Luso Ténis", 
+                "Tennis Portal",
+                "Creator and editor",
+                "2005-2012",
+                "http://www.joaosaro.com/lusotenis", "www.lusotenis.com / down :("
+        )
+
+        +project(
+                "efeitosifao", 
+                "Efeito Sifão", 
+                "Blog", 
+                "Blogger",
+                "since 2011", 
+                "http://efeitosifao.blogs.sapo.pt", 
+                "www.efeitosifao.blogs.sapo.pt"
+        )

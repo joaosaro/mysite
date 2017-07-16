@@ -2,5 +2,6 @@
 _site/
 _dev/assets/min/
 node_modules/
+workspace/
 .sass-cache
 gulpfile.js
