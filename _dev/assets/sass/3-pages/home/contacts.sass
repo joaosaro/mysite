@@ -1,24 +1,7 @@
 .contacts--header
-    position: relative
-    width: 80%
-    height: 120px
-    margin: 20px auto
-    text-align: right
-    color: $color-back
-    text-shadow: 1px 1px 2px #000
-    background:
-        image: url($imgPath + 'contacts.jpg')
-        size: cover
-        position: center
-
-    h1
-        position: absolute
-        bottom: 20px
-        right: 20px
+    +section-header('contacts.jpg')
 
 .contacts__main
-    width: 400px
-    max-width: 90%
     margin: 25px auto
     overflow: hidden
 
@@ -98,7 +81,7 @@
 
         &:hover
             background-color: lighten($color4, 10%)
-            border-color: darken($color3, 30%)
+            border-color: $links-color
 
 .references--item
     margin: 10px 0
@@ -108,24 +91,18 @@
 
     h4
         font-size: 18px
-        padding-left: 5px
 
     p
         font-size: 14px
         font-weight: 300
-        padding-left: 5px
         margin: 5px 0 10px
 
     a
-        padding: 5px
-        background-color: lighten($color3, 20%)
-
-        &:hover
-            background-color: lighten($color3, 20%)
+        background-color: $color3
 
 .contact--credits
     a
-        background-color: lighten($color3, 20%)
+        background-color: $color3
 
     ul
         list-style: square

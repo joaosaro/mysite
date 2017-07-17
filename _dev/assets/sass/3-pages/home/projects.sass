@@ -1,21 +1,6 @@
 #projects
     .projects--header
-        position: relative
-        width: 80%
-        height: 120px
-        margin: 20px auto
-        text-align: right
-        color: $color-back
-        text-shadow: 1px 1px 2px #000
-        background:
-            image: url($imgPath + 'projects.jpg')
-            size: cover
-            position: center
-
-        h1
-            position: absolute
-            bottom: 20px
-            right: 20px
+        +section-header('projects.jpg')
 
     h2
         text-transform: lowercase
@@ -32,4 +17,4 @@
             font-weight: 300
 
         a
-            background-color: $color3
+            @extend %links

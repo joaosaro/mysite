@@ -1,12 +1,11 @@
-#hero
-    .lead
-        position: relative
-        margin:
-            top: 10%
-            left: 10%
+.hero--lead
+    position: relative
+    margin:
+        top: 10%
 
     .lead--text
-        font-size: 3.5vw
+        width: 80%
+        font-size: 30px
         text-transform: uppercase
         text-decoration: underline
         text-decoration-color: $color3
@@ -18,12 +17,13 @@
             height: 200px
             max-width: 40vw
 
-    .resume
-        width: 80%
-        margin: 20px auto
+.hero--resume
+    width: 80%
+    max-width: 500px
+    margin: 20px 0
 
-    .resume--links
+    &__links
         margin-top: 75px
 
         a
-            background-color: lighten($color3, 20%)
+            background-color: $links-color
