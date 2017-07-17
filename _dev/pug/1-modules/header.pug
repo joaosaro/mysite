@@ -1,9 +1,5 @@
-header
-    h1.page--title
-        include ../../assets/images/lemon.svg
-        | João Saro
-
-    nav.navigation--main
+mixin nav(className)
+    nav(class= className)
         ul
             li: a(href='#hero', class="trigger selected") 
                 | #[span.count 01] Who
@@ -14,3 +10,12 @@ header
             li: a(href='#contacts', class="trigger") 
                 | #[span.count 03] Where
                 span.description talk with me
+
+header
+    h1.page--title
+        include ../../assets/images/lemon.svg
+        | João Saro
+
+    +nav('navigation__desktop')
+
+    +nav('navigation__tablet')

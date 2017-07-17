@@ -1,20 +1,20 @@
 section#hero.is-selected
-    .hero-wrap
     
-        .hero--lead
-            h1.lead--text
-                | Front-end #[span.highlight developer], #[br] 
-                | A touch of #[span.highlight analytics] #[br] 
-                | With a twist of #[span.highlight lemon]
+    .hero--lead
+        h1.lead--text
+            | Front-end #[span.highlight developer], #[br] 
+            | A touch of #[span.highlight analytics] #[br] 
+            | And a twist of #[span.highlight lemon]
 
-            figure.lead--images
-                img(src= imgPath + 'javascript.gif', alt="")
-                img(src= imgPath + 'kurt-lemon.gif', alt="")
+        figure.lead--images
+            img(src= imgPath + 'javascript.gif', alt="")
+            img(src= imgPath + 'kurt-lemon.gif', alt="")
 
-        .hero--resume
-            p From a business student to a programmer professional. #[br]Nowadays, I work as front-end developer at a startup and seeking to deepen knowledge in javascript, vanilla or frameworks such as Vue, React, Angular and D3.
+    .hero--resume
+        p From a business student to a programmer professional. #[br]Nowadays, I work as front-end developer at a startup and seeking to deepen knowledge in javascript, vanilla or frameworks such as Vue, React, Angular and D3.
 
-            p Check here what I had been doing!
-            
-            p.hero--resume__links Download my #[a(href="#", target="_blank") curriculum] or check my #[a(href="#projects", class="what-trigger") projects] and #[a(href="#contacts", class="where-trigger") contacts].
+        p Check here what I had been doing!
+        
+        - var cvLink = "docs/cv/cv-joaosaro.pdf"
+        p.hero--resume__links Download my #[a(href= cvLink, target="_blank") curriculum] or check my #[a(href="#projects", class="what-trigger") projects] and #[a(href="#contacts", class="where-trigger") contacts].
         

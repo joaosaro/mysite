@@ -10,6 +10,9 @@
         text-decoration: underline
         text-decoration-color: $color3
 
+        @media (max-width: $media-phone)
+            font-size: 18px
+
     .lead--images
         margin: 0 auto
 
@@ -17,9 +20,10 @@
             height: 200px
             max-width: 40vw
 
+            @media (max-width: $media-phone)
+                min-width: 45vw
+
 .hero--resume
-    width: 80%
-    max-width: 500px
     margin: 20px 0
 
     &__links

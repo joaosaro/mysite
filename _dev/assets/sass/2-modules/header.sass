@@ -4,21 +4,57 @@ header
     float: left
     color: $color4
 
+    @media (max-width: $media-tablet)
+        display: block
+        width: 100%
+        height: 0
+        float: none
+        z-index: 100
+
     .page--title
         font-family: $fontText
         font-size: 25px
         font-weight: 900
         text-transform: uppercase
         margin: 30px 0 0 14%
+        padding-top: 10px
 
         svg
             margin-right: 5px
             transform: translateY(-50%)
 
-.navigation--main
+        @media (max-width: $media-tablet)
+            position: fixed
+            height: $tablet-top
+            width: 100%
+            margin: 0
+            text-align: center
+            background-color: $color4
+            color: $color-back
+            line-height: $tablet-top
+            vertical-align: middle
+
+            svg g
+                fill: $color3
+
+        @media (max-width: $media-phone)
+            height: $phone-top
+            line-height: $phone-top
+            padding-top: 0px
+            font-size: 20px
+
+            svg
+                margin-right: 0
+                transform: translateY(-10%)
+
+
+.navigation__desktop
     height: 100%
     min-width: 25%
     position: fixed
+
+    @media (max-width: $media-tablet)
+        display: none
 
     ul
         bottom: 0
@@ -74,3 +110,38 @@ header
                 .count
                     color: $color3
                     font-size: 18px
+
+.navigation__tablet
+    position: fixed
+    bottom: 0
+    height: $tablet-bottom
+    width: 100%
+    background-color: lighten($color3, 20%)
+
+    display: none
+
+    @media (max-width: $media-tablet)
+        display: block
+
+    @media (max-width: $media-phone)
+        height: $phone-bottom
+
+    ul
+        display: flex
+        justify-content: space-around
+        align-items: center
+        max-width: 320px
+        margin: 0 auto
+        height: 100%
+
+        li
+            text-align: center
+            font-weight: 700
+
+
+            .count
+                display: none
+
+            .description
+                display: block
+                font-weight: 300
