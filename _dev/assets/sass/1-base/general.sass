@@ -101,10 +101,11 @@ ul
             width: 90%
             margin: 0 auto
 
-    @media (max-width: $media-tablet)
+    @media (max-width: $media-phone)
         main
             padding-top: $phone-top
             padding-bottom: $phone-bottom
+
 section
     position: absolute
     width: 100%
@@ -121,6 +122,9 @@ section
         opacity: 1
         height: auto
         z-index: 1
+
+    @media (max-width: $media-phone)
+        padding-bottom: $phone-bottom
 
 .last
     margin: 0
