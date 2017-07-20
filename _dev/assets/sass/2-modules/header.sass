@@ -139,15 +139,20 @@ header
             text-align: center
             font-weight: 700
 
+            a
+                transition: all .3s
+
+                &.selected
+                    $border-color: lighten($color4, 30%)
+                    position: relative
+                    display: block
+                    padding: 5px 0
+                    border-top: 2px solid $border-color
+                    border-bottom: 2px solid $border-color
+
             .count
                 display: none
 
             .description
                 display: block
                 font-weight: 300
-
-            .selected
-                position: relative
-                display: block
-                background-color: white
-                border-radius: 50%
