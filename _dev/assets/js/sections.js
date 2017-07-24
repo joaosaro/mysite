@@ -20,11 +20,11 @@ function main() {
         $(this).addClass('selected');
 
          if (href === '#hero') {
-            list.style.marginBottom = '100px';
+            list.style.marginBottom = '50px';
          } else if (href === '#projects') {
-            list.style.marginBottom = '150px';
+            list.style.marginBottom = '100px';
          } else if (href === '#contacts') {
-            list.style.marginBottom = '200px';
+            list.style.marginBottom = '150px';
          }
       }
    }
@@ -45,13 +45,13 @@ $('.what-trigger').on('click', function () {
   $(href).addClass("is-selected");
   $(anchorItems[1]).addClass('selected');
 
-   if (href === '#hero') {
-      list.style.marginBottom = '100px';
-   } else if (href === '#projects') {
-      list.style.marginBottom = '150px';
-   } else if (href === '#contacts') {
-      list.style.marginBottom = '200px';
-   }
+  if (href === '#hero') {
+     list.style.marginBottom = '50px';
+  } else if (href === '#projects') {
+     list.style.marginBottom = '100px';
+  } else if (href === '#contacts') {
+     list.style.marginBottom = '150px';
+  }
 });
 
 $('.where-trigger').on('click', function () {
@@ -68,13 +68,13 @@ $('.where-trigger').on('click', function () {
   $(href).addClass("is-selected");
   $(anchorItems[2]).addClass('selected');
 
-   if (href === '#hero') {
-      list.style.marginBottom = '100px';
-   } else if (href === '#projects') {
-      list.style.marginBottom = '150px';
-   } else if (href === '#contacts') {
-      list.style.marginBottom = '200px';
-   }
+  if (href === '#hero') {
+     list.style.marginBottom = '50px';
+  } else if (href === '#projects') {
+     list.style.marginBottom = '100px';
+  } else if (href === '#contacts') {
+     list.style.marginBottom = '150px';
+  }
 });
 
 window.onload = function() {
