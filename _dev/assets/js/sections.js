@@ -3,6 +3,7 @@ var sections = document.getElementsByTagName('section');
 var list = document.getElementsByTagName('ul')[0];
 
 function main() {
+    list.style.marginBottom = '50px';
    for (var i = 0; i < anchorItems.length; i++) {
       anchorItems[i].onclick = function() {
 
