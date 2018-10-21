@@ -61,7 +61,7 @@ gulp.task('tinypng', function () {
 		.pipe(tinypng({
 			sigFile: 'images/.tinypng-sigs',
 			log: true,
-      key: //key
+            key: null //key
 		}))
 		.pipe(gulp.dest(src + 'assets/min/img/'));
 });
