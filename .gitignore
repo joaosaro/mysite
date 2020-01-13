@@ -4,4 +4,5 @@ _dev/assets/min/
 node_modules/
 workspace/
 .sass-cache
-gulpfile.js
+tinypng.js
+*.log

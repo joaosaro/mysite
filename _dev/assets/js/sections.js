@@ -3,7 +3,8 @@ var sections = document.getElementsByTagName('section');
 var list = document.getElementsByTagName('ul')[0];
 
 function main() {
-   for (var i = 0; i < anchorItems.length; i++) {
+    list.style.opacity = "1";
+    for (var i = 0; i < anchorItems.length; i++) {
       anchorItems[i].onclick = function() {
 
          for (var i = 0; i < anchorItems.length; i++) {
@@ -27,7 +28,7 @@ function main() {
             list.style.marginBottom = '150px';
          }
       }
-   }
+    }
 
 }
 

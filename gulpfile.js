@@ -19,6 +19,8 @@ var data = {
     "home"      : require('./' + src + 'data/home.json')
 };
 
+var TINYPNG_KEY = require('./tinypng.js').tinypngkey;
+
 // HTML - with pug
 gulp.task('pages', function buildHTML(){
     return gulp.src(src + 'pug/pages/**/*.pug')
