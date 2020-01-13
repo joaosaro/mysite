@@ -63,7 +63,7 @@ gulp.task('tinypng', function () {
 		.pipe(tinypng({
 			sigFile: 'images/.tinypng-sigs',
 			log: true,
-      key: 'NSGTHX_lcs3GgUdrWIE9Xf6HhIXyMAu1'
+      key: TINYPNG_KEY
 		}))
 		.pipe(gulp.dest(src + 'assets/min/img/'));
 });
