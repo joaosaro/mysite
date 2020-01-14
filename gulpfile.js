@@ -19,8 +19,6 @@ var data = {
     "home"      : require('./' + src + 'data/home.json')
 };
 
-var TINYPNG_KEY = require('./tinypng.js').tinypngkey;
-
 // HTML - with pug
 gulp.task('pages', function buildHTML(){
     return gulp.src(src + 'pug/pages/**/*.pug')
@@ -55,17 +53,6 @@ gulp.task('del', function(done) {
   var minifiedFolder = src + 'assets/min/';
   del(build, done);
   return del(minifiedFolder, done);
-});
-
-//Compress images with Tinypng
-gulp.task('tinypng', function () {
-	gulp.src(src + 'assets/images/**/*.{png,jpg,jpeg}')
-		.pipe(tinypng({
-			sigFile: 'images/.tinypng-sigs',
-			log: true,
-      key: TINYPNG_KEY
-		}))
-		.pipe(gulp.dest(src + 'assets/min/img/'));
 });
 
 //Copy SVG Images
@@ -104,7 +91,6 @@ gulp.task('default', function() {
         'styles',
         'scripts',
         'pages',
-        'tinypng',
         'images',
         'gifsvg',
         'statics',
