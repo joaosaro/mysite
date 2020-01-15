@@ -84,7 +84,7 @@ gulp.task('watch', function() {
 })
 
 //Gulp main task
-gulp.task('default', function() {
+gulp.task('dev', function() {
     gulp.start([
         'styles',
         'scripts',
@@ -96,7 +96,7 @@ gulp.task('default', function() {
     ]);
 });
 
-gulp.task('deploy', function() {
+gulp.task('default', function() {
   gulp.start([
       'styles',
       'scripts',
