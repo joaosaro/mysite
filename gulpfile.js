@@ -4,7 +4,6 @@ var gulp      = require('gulp'),
     sass      = require('gulp-ruby-sass'),
     prefix    = require('gulp-autoprefixer'),
     uglify    = require('gulp-uglify'),
-    tinypng   = require('gulp-tinypng-compress'),
     plumber   = require('gulp-plumber'),
     del       = require('del');
 
@@ -79,7 +78,6 @@ gulp.task('watch', function() {
     gulp.watch(src + 'assets/min/**/*', ['pages']);
     gulp.watch(src + 'assets/sass/**/*', ['styles']);
     gulp.watch(src + 'assets/js/**/*', ['scripts']);
-    gulp.watch(src + 'assets/img/**/*.{png,jpg,jpeg}', ['tinypng']);
     gulp.watch(src + 'assets/img/**/*.{svg,gif}', ['gifsvg']);
     gulp.watch(src + 'assets/min/img/**/*', ['images']);
     gulp.watch(src + 'statics/**/*', ['statics']);
