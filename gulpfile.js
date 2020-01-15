@@ -95,3 +95,14 @@ gulp.task('default', function() {
         'watch'
     ]);
 });
+
+gulp.task('deploy', function() {
+  gulp.start([
+      'styles',
+      'scripts',
+      'pages',
+      'images',
+      'gifsvg',
+      'statics'
+  ]);
+});
