@@ -1,6 +1,5 @@
 ### to hide
 _site/
-_dev/assets/min/
 node_modules/
 workspace/
 .sass-cache

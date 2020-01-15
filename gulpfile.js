@@ -1,10 +1,9 @@
 //Modules
 var gulp      = require('gulp'),
     pug       = require('gulp-pug'),
-    sass      = require('gulp-ruby-sass'),
+    sass      = require('gulp-sass'),
     prefix    = require('gulp-autoprefixer'),
     uglify    = require('gulp-uglify'),
-    tinypng   = require('gulp-tinypng-compress'),
     plumber   = require('gulp-plumber'),
     del       = require('del');
 
@@ -18,8 +17,6 @@ var data = {
     //Pages
     "home"      : require('./' + src + 'data/home.json')
 };
-
-var TINYPNG_KEY = require('./tinypng.js').tinypngkey;
 
 // HTML - with pug
 gulp.task('pages', function buildHTML(){
@@ -57,17 +54,6 @@ gulp.task('del', function(done) {
   return del(minifiedFolder, done);
 });
 
-//Compress images with Tinypng
-gulp.task('tinypng', function () {
-	gulp.src(src + 'assets/images/**/*.{png,jpg,jpeg}')
-		.pipe(tinypng({
-			sigFile: 'images/.tinypng-sigs',
-			log: true,
-      key: TINYPNG_KEY
-		}))
-		.pipe(gulp.dest(src + 'assets/min/img/'));
-});
-
 //Copy SVG Images
 gulp.task('gifsvg', function() {
    gulp.src(src + 'assets/images/**/*.{svg,gif}')
@@ -92,7 +78,6 @@ gulp.task('watch', function() {
     gulp.watch(src + 'assets/min/**/*', ['pages']);
     gulp.watch(src + 'assets/sass/**/*', ['styles']);
     gulp.watch(src + 'assets/js/**/*', ['scripts']);
-    gulp.watch(src + 'assets/img/**/*.{png,jpg,jpeg}', ['tinypng']);
     gulp.watch(src + 'assets/img/**/*.{svg,gif}', ['gifsvg']);
     gulp.watch(src + 'assets/min/img/**/*', ['images']);
     gulp.watch(src + 'statics/**/*', ['statics']);
@@ -104,7 +89,6 @@ gulp.task('default', function() {
         'styles',
         'scripts',
         'pages',
-        'tinypng',
         'images',
         'gifsvg',
         'statics',
