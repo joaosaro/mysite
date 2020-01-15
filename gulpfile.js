@@ -1,7 +1,7 @@
 //Modules
 var gulp      = require('gulp'),
     pug       = require('gulp-pug'),
-    sass      = require('gulp-ruby-sass'),
+    sass      = require('gulp-sass'),
     prefix    = require('gulp-autoprefixer'),
     uglify    = require('gulp-uglify'),
     plumber   = require('gulp-plumber'),
